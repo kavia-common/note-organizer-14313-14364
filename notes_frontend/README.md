@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Notes Frontend
 
-## Getting Started
+A modern, minimalistic, light-themed Next.js app for creating, editing, and organizing notes.
 
-First, run the development server:
+## Quick Start
+
+Install dependencies and run:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Create, edit, delete notes
+- List and view notes
+- Organize with tags
+- Search across title, content, and tags
+- Sort by last updated or title
+- Local storage persistence (mocked backend)
+- Responsive layout:
+  - Top bar with search, sort, view toggle, and new
+  - Sidebar with notes list and tag filter
+  - Main editor/viewer area
 
-## Learn More
+See FEATURES.md for more details.
 
-To learn more about Next.js, take a look at the following resources:
+## Tech
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js App Router
+- TypeScript + React
+- Tailwind CSS (v4)
+- LocalStorage (can be replaced by API)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Backend integration (optional)
 
-## Deploy on Vercel
+Replace the repository in `src/lib/storage.ts` with API calls (e.g., fetch) and read a base URL from `NEXT_PUBLIC_API_BASE_URL`. An `.env.example` file is provided.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
